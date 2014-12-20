@@ -229,10 +229,10 @@ func (c *CodeDeploy) UpdateDeploymentGroup(req *UpdateDeploymentGroupInput) (res
 
 // ApplicationInfo is undocumented.
 type ApplicationInfo struct {
-	ApplicationID   aws.StringValue  `json:"applicationId,omitempty"`
-	ApplicationName aws.StringValue  `json:"applicationName,omitempty"`
-	CreateTime      time.Time        `json:"createTime,omitempty"`
-	LinkedToGitHub  aws.BooleanValue `json:"linkedToGitHub,omitempty"`
+	ApplicationID   aws.StringValue        `json:"applicationId,omitempty"`
+	ApplicationName aws.StringValue        `json:"applicationName,omitempty"`
+	CreateTime      aws.UnixTimestampValue `json:"createTime,omitempty"`
+	LinkedToGitHub  aws.BooleanValue       `json:"linkedToGitHub,omitempty"`
 }
 
 // Possible values for CodeDeploy.
@@ -349,10 +349,10 @@ type DeleteDeploymentGroupOutput struct {
 
 // DeploymentConfigInfo is undocumented.
 type DeploymentConfigInfo struct {
-	CreateTime           time.Time            `json:"createTime,omitempty"`
-	DeploymentConfigID   aws.StringValue      `json:"deploymentConfigId,omitempty"`
-	DeploymentConfigName aws.StringValue      `json:"deploymentConfigName,omitempty"`
-	MinimumHealthyHosts  *MinimumHealthyHosts `json:"minimumHealthyHosts,omitempty"`
+	CreateTime           aws.UnixTimestampValue `json:"createTime,omitempty"`
+	DeploymentConfigID   aws.StringValue        `json:"deploymentConfigId,omitempty"`
+	DeploymentConfigName aws.StringValue        `json:"deploymentConfigName,omitempty"`
+	MinimumHealthyHosts  *MinimumHealthyHosts   `json:"minimumHealthyHosts,omitempty"`
 }
 
 // Possible values for CodeDeploy.
@@ -375,20 +375,20 @@ type DeploymentGroupInfo struct {
 
 // DeploymentInfo is undocumented.
 type DeploymentInfo struct {
-	ApplicationName               aws.StringValue     `json:"applicationName,omitempty"`
-	CompleteTime                  time.Time           `json:"completeTime,omitempty"`
-	CreateTime                    time.Time           `json:"createTime,omitempty"`
-	Creator                       aws.StringValue     `json:"creator,omitempty"`
-	DeploymentConfigName          aws.StringValue     `json:"deploymentConfigName,omitempty"`
-	DeploymentGroupName           aws.StringValue     `json:"deploymentGroupName,omitempty"`
-	DeploymentID                  aws.StringValue     `json:"deploymentId,omitempty"`
-	DeploymentOverview            *DeploymentOverview `json:"deploymentOverview,omitempty"`
-	Description                   aws.StringValue     `json:"description,omitempty"`
-	ErrorInformation              *ErrorInformation   `json:"errorInformation,omitempty"`
-	IgnoreApplicationStopFailures aws.BooleanValue    `json:"ignoreApplicationStopFailures,omitempty"`
-	Revision                      *RevisionLocation   `json:"revision,omitempty"`
-	StartTime                     time.Time           `json:"startTime,omitempty"`
-	Status                        aws.StringValue     `json:"status,omitempty"`
+	ApplicationName               aws.StringValue        `json:"applicationName,omitempty"`
+	CompleteTime                  aws.UnixTimestampValue `json:"completeTime,omitempty"`
+	CreateTime                    aws.UnixTimestampValue `json:"createTime,omitempty"`
+	Creator                       aws.StringValue        `json:"creator,omitempty"`
+	DeploymentConfigName          aws.StringValue        `json:"deploymentConfigName,omitempty"`
+	DeploymentGroupName           aws.StringValue        `json:"deploymentGroupName,omitempty"`
+	DeploymentID                  aws.StringValue        `json:"deploymentId,omitempty"`
+	DeploymentOverview            *DeploymentOverview    `json:"deploymentOverview,omitempty"`
+	Description                   aws.StringValue        `json:"description,omitempty"`
+	ErrorInformation              *ErrorInformation      `json:"errorInformation,omitempty"`
+	IgnoreApplicationStopFailures aws.BooleanValue       `json:"ignoreApplicationStopFailures,omitempty"`
+	Revision                      *RevisionLocation      `json:"revision,omitempty"`
+	StartTime                     aws.UnixTimestampValue `json:"startTime,omitempty"`
+	Status                        aws.StringValue        `json:"status,omitempty"`
 }
 
 // DeploymentOverview is undocumented.
@@ -455,11 +455,11 @@ type ErrorInformation struct {
 
 // GenericRevisionInfo is undocumented.
 type GenericRevisionInfo struct {
-	DeploymentGroups []string        `json:"deploymentGroups,omitempty"`
-	Description      aws.StringValue `json:"description,omitempty"`
-	FirstUsedTime    time.Time       `json:"firstUsedTime,omitempty"`
-	LastUsedTime     time.Time       `json:"lastUsedTime,omitempty"`
-	RegisterTime     time.Time       `json:"registerTime,omitempty"`
+	DeploymentGroups []string               `json:"deploymentGroups,omitempty"`
+	Description      aws.StringValue        `json:"description,omitempty"`
+	FirstUsedTime    aws.UnixTimestampValue `json:"firstUsedTime,omitempty"`
+	LastUsedTime     aws.UnixTimestampValue `json:"lastUsedTime,omitempty"`
+	RegisterTime     aws.UnixTimestampValue `json:"registerTime,omitempty"`
 }
 
 // GetApplicationInput is undocumented.
@@ -545,11 +545,11 @@ const (
 
 // InstanceSummary is undocumented.
 type InstanceSummary struct {
-	DeploymentID    aws.StringValue  `json:"deploymentId,omitempty"`
-	InstanceID      aws.StringValue  `json:"instanceId,omitempty"`
-	LastUpdatedAt   time.Time        `json:"lastUpdatedAt,omitempty"`
-	LifecycleEvents []LifecycleEvent `json:"lifecycleEvents,omitempty"`
-	Status          aws.StringValue  `json:"status,omitempty"`
+	DeploymentID    aws.StringValue        `json:"deploymentId,omitempty"`
+	InstanceID      aws.StringValue        `json:"instanceId,omitempty"`
+	LastUpdatedAt   aws.UnixTimestampValue `json:"lastUpdatedAt,omitempty"`
+	LifecycleEvents []LifecycleEvent       `json:"lifecycleEvents,omitempty"`
+	Status          aws.StringValue        `json:"status,omitempty"`
 }
 
 // Possible values for CodeDeploy.
@@ -564,11 +564,11 @@ const (
 
 // LifecycleEvent is undocumented.
 type LifecycleEvent struct {
-	Diagnostics        *Diagnostics    `json:"diagnostics,omitempty"`
-	EndTime            time.Time       `json:"endTime,omitempty"`
-	LifecycleEventName aws.StringValue `json:"lifecycleEventName,omitempty"`
-	StartTime          time.Time       `json:"startTime,omitempty"`
-	Status             aws.StringValue `json:"status,omitempty"`
+	Diagnostics        *Diagnostics           `json:"diagnostics,omitempty"`
+	EndTime            aws.UnixTimestampValue `json:"endTime,omitempty"`
+	LifecycleEventName aws.StringValue        `json:"lifecycleEventName,omitempty"`
+	StartTime          aws.UnixTimestampValue `json:"startTime,omitempty"`
+	Status             aws.StringValue        `json:"status,omitempty"`
 }
 
 // Possible values for CodeDeploy.
@@ -734,8 +734,8 @@ const (
 
 // TimeRange is undocumented.
 type TimeRange struct {
-	End   time.Time `json:"end,omitempty"`
-	Start time.Time `json:"start,omitempty"`
+	End   aws.UnixTimestampValue `json:"end,omitempty"`
+	Start aws.UnixTimestampValue `json:"start,omitempty"`
 }
 
 // UpdateApplicationInput is undocumented.

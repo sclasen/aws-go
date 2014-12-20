@@ -1,5 +1,10 @@
 package aws
 
+import (
+	"time"
+	"strconv"
+)
+
 // A StringValue is a string which may or may not be present.
 type StringValue *string
 
@@ -58,4 +63,29 @@ type DoubleValue *float64
 // Double converts a Go float64 into a DoubleValue.
 func Double(v float64) DoubleValue {
 	return &v
+}
+
+//UnixTimestamp is a wrapper struct around time.Time that provides json de/serialization in  "timestampFormat":"unixTimestamp" expected format.
+type UnixTimestampValue struct{
+	time.Time
+}
+
+func UnixTimestamp(v time.Time) UnixTimestampValue {
+	return UnixTimestampValue{v}
+}
+
+//UnmarshalJSON parses the  "timestampFormat":"unixTimestamp" representation of time.
+func (s *UnixTimestampValue) UnmarshalJSON(b []byte) error {
+	timestamp, err := strconv.ParseFloat(string(b), 64)
+	if err != nil {
+		return err
+	}
+	s.Time = time.Unix(int64(timestamp), 0)
+	return nil
+}
+
+//MarshalJSON formats a time.Time into  "timestampFormat":"unixTimestamp"  expected format.
+func (s *UnixTimestampValue) MarshalJSON() ([]byte, error) {
+	timestamp := s.Time.Unix()
+	return []byte(strconv.FormatFloat(float64(timestamp), 'g', -1, 64)), nil
 }

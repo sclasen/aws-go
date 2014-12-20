@@ -406,6 +406,8 @@ func (s *Shape) Type() string {
 		// rather than allow that to screw up all the other packages.
 		if service.PackageName == "dynamodb" {
 			return "float64"
+		} else if s.TimestampFormat == "unixTimestamp" {
+			return "aws.UnixTimestampValue"
 		}
 		return "time.Time"
 	}
@@ -473,6 +475,7 @@ func Load(name string, r io.Reader) error {
 
 	for name, shape := range service.Shapes {
 		shape.Name = name
+		shape.TimestampFormat = service.Metadata.TimestampFormat
 	}
 
 	service.FullName = service.Metadata.ServiceFullName
