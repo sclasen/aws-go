@@ -757,8 +757,8 @@ type metadataBatchGetDeploymentsOutput struct {
 }
 
 const (
-	BundleTypeTar = "tar"
-	BundleTypeTgz = "tgz"
+	BundleTypeTAR = "tar"
+	BundleTypeTGZ = "tgz"
 	BundleTypeZip = "zip"
 )
 

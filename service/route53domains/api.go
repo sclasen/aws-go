@@ -841,7 +841,6 @@ const (
 )
 
 const (
-	CountryCodeAZ = "AZ"
 	CountryCodeAd = "AD"
 	CountryCodeAe = "AE"
 	CountryCodeAf = "AF"
@@ -857,7 +856,7 @@ const (
 	CountryCodeAt = "AT"
 	CountryCodeAu = "AU"
 	CountryCodeAw = "AW"
-	CountryCodeBI = "BI"
+	CountryCodeAz = "AZ"
 	CountryCodeBa = "BA"
 	CountryCodeBb = "BB"
 	CountryCodeBd = "BD"
@@ -865,6 +864,7 @@ const (
 	CountryCodeBf = "BF"
 	CountryCodeBg = "BG"
 	CountryCodeBh = "BH"
+	CountryCodeBi = "BI"
 	CountryCodeBj = "BJ"
 	CountryCodeBl = "BL"
 	CountryCodeBm = "BM"
@@ -876,8 +876,8 @@ const (
 	CountryCodeBw = "BW"
 	CountryCodeBy = "BY"
 	CountryCodeBz = "BZ"
-	CountryCodeCC = "CC"
 	CountryCodeCa = "CA"
+	CountryCodeCc = "CC"
 	CountryCodeCd = "CD"
 	CountryCodeCf = "CF"
 	CountryCodeCg = "CG"

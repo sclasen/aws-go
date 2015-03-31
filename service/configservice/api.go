@@ -455,7 +455,7 @@ const (
 	ConfigurationItemStatusDeleted    = "Deleted"
 	ConfigurationItemStatusDiscovered = "Discovered"
 	ConfigurationItemStatusFailed     = "Failed"
-	ConfigurationItemStatusOk         = "Ok"
+	ConfigurationItemStatusOK         = "Ok"
 )
 
 // An object that represents the recording of configuration changes of an AWS
@@ -829,7 +829,7 @@ type metadataRelationship struct {
 const (
 	ResourceTypeAWSCloudTrailTrail     = "AWS::CloudTrail::Trail"
 	ResourceTypeAWSEC2CustomerGateway  = "AWS::EC2::CustomerGateway"
-	ResourceTypeAWSEC2Eip              = "AWS::EC2::EIP"
+	ResourceTypeAWSEC2EIP              = "AWS::EC2::EIP"
 	ResourceTypeAWSEC2Instance         = "AWS::EC2::Instance"
 	ResourceTypeAWSEC2InternetGateway  = "AWS::EC2::InternetGateway"
 	ResourceTypeAWSEC2NetworkACL       = "AWS::EC2::NetworkAcl"
@@ -838,9 +838,9 @@ const (
 	ResourceTypeAWSEC2SecurityGroup    = "AWS::EC2::SecurityGroup"
 	ResourceTypeAWSEC2Subnet           = "AWS::EC2::Subnet"
 	ResourceTypeAWSEC2VPC              = "AWS::EC2::VPC"
+	ResourceTypeAWSEC2VPNconnection    = "AWS::EC2::VPNConnection"
+	ResourceTypeAWSEC2VPNgateway       = "AWS::EC2::VPNGateway"
 	ResourceTypeAWSEC2Volume           = "AWS::EC2::Volume"
-	ResourceTypeAWSEC2Vpnconnection    = "AWS::EC2::VPNConnection"
-	ResourceTypeAWSEC2Vpngateway       = "AWS::EC2::VPNGateway"
 )
 
 // The input for the StartConfigurationRecorder action.
