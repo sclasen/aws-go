@@ -6822,7 +6822,7 @@ type metadataRemoveUserFromGroupOutput struct {
 }
 
 const (
-	ReportFormatTypeTextCSV = "text/csv"
+	ReportFormatTypeTextCsv = "text/csv"
 )
 
 const (
@@ -7620,7 +7620,7 @@ const (
 const (
 	SummaryKeyTypeAccessKeysPerUserQuota            = "AccessKeysPerUserQuota"
 	SummaryKeyTypeAccountAccessKeysPresent          = "AccountAccessKeysPresent"
-	SummaryKeyTypeAccountMFAenabled                 = "AccountMFAEnabled"
+	SummaryKeyTypeAccountMfaenabled                 = "AccountMFAEnabled"
 	SummaryKeyTypeAccountSigningCertificatesPresent = "AccountSigningCertificatesPresent"
 	SummaryKeyTypeAttachedPoliciesPerGroupQuota     = "AttachedPoliciesPerGroupQuota"
 	SummaryKeyTypeAttachedPoliciesPerRoleQuota      = "AttachedPoliciesPerRoleQuota"
@@ -7629,8 +7629,8 @@ const (
 	SummaryKeyTypeGroups                            = "Groups"
 	SummaryKeyTypeGroupsPerUserQuota                = "GroupsPerUserQuota"
 	SummaryKeyTypeGroupsQuota                       = "GroupsQuota"
-	SummaryKeyTypeMFAdevices                        = "MFADevices"
-	SummaryKeyTypeMFAdevicesInUse                   = "MFADevicesInUse"
+	SummaryKeyTypeMfadevices                        = "MFADevices"
+	SummaryKeyTypeMfadevicesInUse                   = "MFADevicesInUse"
 	SummaryKeyTypePolicies                          = "Policies"
 	SummaryKeyTypePoliciesQuota                     = "PoliciesQuota"
 	SummaryKeyTypePolicySizeQuota                   = "PolicySizeQuota"

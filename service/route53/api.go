@@ -1941,10 +1941,10 @@ type metadataHealthCheckObservation struct {
 
 const (
 	HealthCheckTypeHTTP          = "HTTP"
-	HealthCheckTypeHTTPS         = "HTTPS"
-	HealthCheckTypeHTTPSStrMatch = "HTTPS_STR_MATCH"
 	HealthCheckTypeHTTPStrMatch  = "HTTP_STR_MATCH"
-	HealthCheckTypeTCP           = "TCP"
+	HealthCheckTypeHttps         = "HTTPS"
+	HealthCheckTypeHttpsStrMatch = "HTTPS_STR_MATCH"
+	HealthCheckTypeTcp           = "TCP"
 )
 
 // A complex type that contain information about the specified hosted zone.
@@ -2504,7 +2504,7 @@ type metadataListTagsForResourcesOutput struct {
 const (
 	RRTypeA     = "A"
 	RRTypeAaaa  = "AAAA"
-	RRTypeCname = "CNAME"
+	RRTypeCNAME = "CNAME"
 	RRTypeMx    = "MX"
 	RRTypeNs    = "NS"
 	RRTypePtr   = "PTR"

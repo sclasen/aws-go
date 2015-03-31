@@ -2170,7 +2170,7 @@ const (
 	AppTypeJava   = "java"
 	AppTypeNodejs = "nodejs"
 	AppTypeOther  = "other"
-	AppTypePHP    = "php"
+	AppTypePhp    = "php"
 	AppTypeRails  = "rails"
 	AppTypeStatic = "static"
 )
@@ -4345,11 +4345,11 @@ const (
 	LayerAttributesKeysHaproxyStatsPassword        = "HaproxyStatsPassword"
 	LayerAttributesKeysHaproxyStatsURL             = "HaproxyStatsUrl"
 	LayerAttributesKeysHaproxyStatsUser            = "HaproxyStatsUser"
-	LayerAttributesKeysJVM                         = "Jvm"
-	LayerAttributesKeysJVMOptions                  = "JvmOptions"
-	LayerAttributesKeysJVMVersion                  = "JvmVersion"
 	LayerAttributesKeysJavaAppServer               = "JavaAppServer"
 	LayerAttributesKeysJavaAppServerVersion        = "JavaAppServerVersion"
+	LayerAttributesKeysJvm                         = "Jvm"
+	LayerAttributesKeysJvmOptions                  = "JvmOptions"
+	LayerAttributesKeysJvmVersion                  = "JvmVersion"
 	LayerAttributesKeysManageBundler               = "ManageBundler"
 	LayerAttributesKeysMemcachedMemory             = "MemcachedMemory"
 	LayerAttributesKeysMysqlRootPassword           = "MysqlRootPassword"
@@ -4369,7 +4369,7 @@ const (
 	LayerTypeMemcached        = "memcached"
 	LayerTypeMonitoringMaster = "monitoring-master"
 	LayerTypeNodejsApp        = "nodejs-app"
-	LayerTypePHPApp           = "php-app"
+	LayerTypePhpApp           = "php-app"
 	LayerTypeRailsApp         = "rails-app"
 	LayerTypeWeb              = "web"
 )
@@ -4939,7 +4939,7 @@ const (
 	SourceTypeArchive = "archive"
 	SourceTypeGit     = "git"
 	SourceTypeS3      = "s3"
-	SourceTypeSVN     = "svn"
+	SourceTypeSvn     = "svn"
 )
 
 // Describes a stack.
@@ -5693,7 +5693,7 @@ type metadataUserProfile struct {
 }
 
 const (
-	VirtualizationTypeHVM         = "hvm"
+	VirtualizationTypeHvm         = "hvm"
 	VirtualizationTypeParavirtual = "paravirtual"
 )
 

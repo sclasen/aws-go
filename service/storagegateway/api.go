@@ -2893,7 +2893,7 @@ const (
 	ErrorCodeGatewayNotConnected               = "GatewayNotConnected"
 	ErrorCodeGatewayNotFound                   = "GatewayNotFound"
 	ErrorCodeGatewayProxyNetworkConnectionBusy = "GatewayProxyNetworkConnectionBusy"
-	ErrorCodeIAMnotSupported                   = "IAMNotSupported"
+	ErrorCodeIamnotSupported                   = "IAMNotSupported"
 	ErrorCodeInitiatorInvalid                  = "InitiatorInvalid"
 	ErrorCodeInitiatorNotFound                 = "InitiatorNotFound"
 	ErrorCodeInternalError                     = "InternalError"

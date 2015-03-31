@@ -10807,8 +10807,8 @@ type metadataDiskImageDetail struct {
 
 const (
 	DiskImageFormatRaw  = "RAW"
-	DiskImageFormatVHD  = "VHD"
-	DiskImageFormatVMDK = "VMDK"
+	DiskImageFormatVhd  = "VHD"
+	DiskImageFormatVmdk = "VMDK"
 )
 
 type DiskImageVolumeDescription struct {
@@ -10995,7 +10995,7 @@ const (
 const (
 	ExportEnvironmentCitrix    = "citrix"
 	ExportEnvironmentMicrosoft = "microsoft"
-	ExportEnvironmentVMware    = "vmware"
+	ExportEnvironmentVmware    = "vmware"
 )
 
 // Describes an export task.
@@ -11088,7 +11088,7 @@ type metadataFilter struct {
 }
 
 const (
-	GatewayTypeIPsec1 = "ipsec.1"
+	GatewayTypeIpsec1 = "ipsec.1"
 )
 
 type GetConsoleOutputInput struct {
@@ -12140,8 +12140,8 @@ const (
 	InstanceTypeC48xlarge  = "c4.8xlarge"
 	InstanceTypeC4Large    = "c4.large"
 	InstanceTypeC4Xlarge   = "c4.xlarge"
-	InstanceTypeCc14xlarge = "cc1.4xlarge"
-	InstanceTypeCc28xlarge = "cc2.8xlarge"
+	InstanceTypeCC14xlarge = "cc1.4xlarge"
+	InstanceTypeCC28xlarge = "cc2.8xlarge"
 	InstanceTypeCg14xlarge = "cg1.4xlarge"
 	InstanceTypeCr18xlarge = "cr1.8xlarge"
 	InstanceTypeG22xlarge  = "g2.2xlarge"
@@ -13571,7 +13571,7 @@ type metadataReportInstanceStatusOutput struct {
 
 const (
 	ReportStatusTypeImpaired = "impaired"
-	ReportStatusTypeOK       = "ok"
+	ReportStatusTypeOk       = "ok"
 )
 
 type RequestSpotInstancesInput struct {
@@ -14953,7 +14953,7 @@ const (
 	SummaryStatusImpaired         = "impaired"
 	SummaryStatusInsufficientData = "insufficient-data"
 	SummaryStatusNotApplicable    = "not-applicable"
-	SummaryStatusOK               = "ok"
+	SummaryStatusOk               = "ok"
 )
 
 // Describes a tag.
@@ -15372,7 +15372,7 @@ type metadataVPNStaticRoute struct {
 }
 
 const (
-	VirtualizationTypeHVM         = "hvm"
+	VirtualizationTypeHvm         = "hvm"
 	VirtualizationTypeParavirtual = "paravirtual"
 )
 
@@ -15572,7 +15572,7 @@ type metadataVolumeStatusInfo struct {
 const (
 	VolumeStatusInfoStatusImpaired         = "impaired"
 	VolumeStatusInfoStatusInsufficientData = "insufficient-data"
-	VolumeStatusInfoStatusOK               = "ok"
+	VolumeStatusInfoStatusOk               = "ok"
 )
 
 // Describes the volume status.

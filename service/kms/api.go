@@ -865,8 +865,8 @@ type metadataCreateKeyOutput struct {
 }
 
 const (
-	DataKeySpecAES128 = "AES_128"
-	DataKeySpecAES256 = "AES_256"
+	DataKeySpecAes128 = "AES_128"
+	DataKeySpecAes256 = "AES_256"
 )
 
 type DecryptInput struct {

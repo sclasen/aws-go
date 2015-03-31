@@ -3698,7 +3698,7 @@ const (
 
 const (
 	ProtocolHTTP  = "http"
-	ProtocolHTTPS = "https"
+	ProtocolHttps = "https"
 )
 
 type PutBucketACLInput struct {
@@ -4395,7 +4395,7 @@ type metadataRule struct {
 }
 
 const (
-	ServerSideEncryptionAES256 = "AES256"
+	ServerSideEncryptionAes256 = "AES256"
 )
 
 const (

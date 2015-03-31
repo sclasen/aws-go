@@ -2005,8 +2005,8 @@ const (
 )
 
 const (
-	MinimumProtocolVersionSSLv3 = "SSLv3"
-	MinimumProtocolVersionTLSv1 = "TLSv1"
+	MinimumProtocolVersionSslv3 = "SSLv3"
+	MinimumProtocolVersionTlsv1 = "TLSv1"
 )
 
 // A complex type that describes the Amazon S3 bucket or the HTTP server (for
@@ -2146,8 +2146,8 @@ type metadataS3OriginConfig struct {
 }
 
 const (
-	SSLSupportMethodSNIOnly = "sni-only"
-	SSLSupportMethodVIP     = "vip"
+	SSLSupportMethodSniOnly = "sni-only"
+	SSLSupportMethodVip     = "vip"
 )
 
 // A complex type that lists the AWS accounts that were included in the TrustedSigners
@@ -2557,6 +2557,6 @@ type metadataViewerCertificate struct {
 
 const (
 	ViewerProtocolPolicyAllowAll        = "allow-all"
-	ViewerProtocolPolicyHTTPSOnly       = "https-only"
-	ViewerProtocolPolicyRedirectToHTTPS = "redirect-to-https"
+	ViewerProtocolPolicyHttpsOnly       = "https-only"
+	ViewerProtocolPolicyRedirectToHttps = "redirect-to-https"
 )

@@ -164,8 +164,8 @@ var tplAPI = template.Must(template.New("api").Parse(`
 {{ if eq $s.Type "structure" }}{{ $s.GoCode }}{{ end }}
 {{ if $s.Enums }}
 const (
-{{ range $name, $value := $s.Enums }}
-{{ $name }} = {{ $value }}{{ end }}
+{{ range $enum := $s.Enums }}
+{{ $enum.Name }} = {{ $enum.Value }}{{ end }}
 )
 {{ end }}
 {{ end }}
