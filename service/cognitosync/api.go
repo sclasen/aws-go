@@ -950,10 +950,10 @@ const (
 )
 
 const (
-	PlatformAdm         = "ADM"
-	PlatformApns        = "APNS"
-	PlatformApnsSandbox = "APNS_SANDBOX"
-	PlatformGcm         = "GCM"
+	PlatformADM         = "ADM"
+	PlatformAPNS        = "APNS"
+	PlatformAPNSSandbox = "APNS_SANDBOX"
+	PlatformGCM         = "GCM"
 )
 
 // Configuration options to be applied to the identity pool.

@@ -278,13 +278,13 @@ func (s *Shape) Enums() []Enum {
 		parts := enumDelims.Split(st, -1)
 		for i, v := range parts {
 			v = strings.ToLower(v)
-			parts[i] = s.API.ExportableName(v)
+			parts[i] = exportable(v)
 		}
 		return strings.Join(parts, "")
 	}
 
 	enums := []Enum{}
-	name := s.API.ExportableName(s.ShapeName)
+	name := exportable(s.ShapeName)
 	for _, e := range s.Enum {
 		if e != "" {
 			enum := Enum{Name: name + fix(e), Value: fmt.Sprintf("%q", e)}
@@ -293,4 +293,15 @@ func (s *Shape) Enums() []Enum {
 	}
 	sort.Sort(ByName(enums))
 	return enums
+}
+
+func exportable(name string) string {
+    // make sure the symbol is exportable
+    name = strings.ToUpper(name[0:1]) + name[1:]
+
+    // fix common AWS<->Go bugaboos
+    for regexp, repl := range replacements {
+        name = regexp.ReplaceAllString(name, repl)
+    }
+    return name
 }

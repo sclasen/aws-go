@@ -1106,8 +1106,8 @@ func (c *ElastiCache) RevokeCacheSecurityGroupIngress(input *RevokeCacheSecurity
 var opRevokeCacheSecurityGroupIngress *aws.Operation
 
 const (
-	AZModeCrossAZ  = "cross-az"
-	AZModeSingleAZ = "single-az"
+	AZModeCrossAz  = "cross-az"
+	AZModeSingleAz = "single-az"
 )
 
 // Represents the input of an AddTagsToResource action.
