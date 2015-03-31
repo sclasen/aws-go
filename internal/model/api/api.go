@@ -162,7 +162,12 @@ var tplAPI = template.Must(template.New("api").Parse(`
 
 {{ range $_, $s := .ShapeList }}
 {{ if eq $s.Type "structure" }}{{ $s.GoCode }}{{ end }}
-
+{{ if $s.Enums }}
+const (
+{{ range $name, $value := $s.Enums }}
+{{ $name }} = {{ $value }}{{ end }}
+)
+{{ end }}
 {{ end }}
 `))
 

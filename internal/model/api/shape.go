@@ -2,6 +2,7 @@ package api
 
 import (
 	"fmt"
+    "regexp"
 	"sort"
 	"strings"
 
@@ -248,4 +249,47 @@ func (s *Shape) IsRequired(member string) bool {
 		}
 	}
 	return false
+}
+
+var enumStrip = regexp.MustCompile(`[()\s]`)
+var enumDelims = regexp.MustCompile(`[-_:\./]+`)
+var enumCamelCase = regexp.MustCompile(`([a-z])([A-Z])`)
+
+// Enums returns a map of enum constant names to their values.
+func (s *Shape) Enums() map[string]string {
+    if s.Enum == nil {
+        return nil
+    }
+
+    fix := func(s string) string {
+        s = enumStrip.ReplaceAllLiteralString(s, "")
+        s = enumCamelCase.ReplaceAllString(s, "$1-$2")
+        parts := enumDelims.Split(s, -1)
+        for i, v := range parts {
+            v = strings.ToLower(v)
+            parts[i] = exportable(v)
+        }
+        return strings.Join(parts, "")
+    }
+
+    enums := map[string]string{}
+    name := exportable(s.ShapeName)
+    for _, e := range s.Enum {
+        if e != "" {
+            enums[name+fix(e)] = fmt.Sprintf("%q", e)
+        }
+    }
+
+    return enums
+}
+
+func exportable(name string) string {
+    // make sure the symbol is exportable
+    name = strings.ToUpper(name[0:1]) + name[1:]
+
+    // fix common AWS<->Go bugaboos
+    for regexp, repl := range replacements {
+        name = regexp.ReplaceAllString(name, repl)
+    }
+    return name
 }
