@@ -256,8 +256,8 @@ var enumDelims = regexp.MustCompile(`[-_:\./]+`)
 var enumCamelCase = regexp.MustCompile(`([a-z])([A-Z])`)
 
 type Enum struct {
-    Name string
-    Value string
+	Name  string
+	Value string
 }
 
 type ByName []Enum
@@ -265,6 +265,7 @@ type ByName []Enum
 func (a ByName) Len() int           { return len(a) }
 func (a ByName) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByName) Less(i, j int) bool { return a[i].Name < a[j].Name }
+
 // Enums returns a map of enum constant names to their values.
 func (s *Shape) Enums() []Enum {
 	if s.Enum == nil {
@@ -286,11 +287,10 @@ func (s *Shape) Enums() []Enum {
 	name := s.API.ExportableName(s.ShapeName)
 	for _, e := range s.Enum {
 		if e != "" {
-            enum := Enum{Name: name+fix(e), Value: fmt.Sprintf("%q", e)}
-            enums = append(enums, enum)
+			enum := Enum{Name: name + fix(e), Value: fmt.Sprintf("%q", e)}
+			enums = append(enums, enum)
 		}
 	}
-    sort.Sort(ByName(enums))
+	sort.Sort(ByName(enums))
 	return enums
 }
-
